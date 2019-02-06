@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    
+</head>
+<body>
+    <h1>Hello</h1>
+    <button onclick="myFunction()">Get a Word!</button>
+    <p></p>
+<script type="text/javascript">
+    var WordBank = ["DOG", "CAT", "TURTLE", "FISH", "IGUANA"];
+    function myFunction() {
+var randomWord = WordBank[Math.floor(Math.random() * WordBank.length)];
+var ChosenWord = randomWord.split("");
+var Dash = Array(ChosenWord.length).fill("-");
+console.log(Dash);
+
+document.onkeyup = function(event) {
+var userGuess = event.key;
+for (var i = 0; i < ChosenWord.length; i++){
+    if (userGuess === ChosenWord [i]) {
+        i === userGuess;
+    }
+    else {
+        document.write(userGuess);
+    }
+
+}
+}
+
+// //dom manipulation
+// let tempUnderScore = document.getElementById('underScore');
+// let tempRightAnswer = document.getElementById('rightAnswer');
+// let tempWrongAnswer = document.getElementById('wrongAnswer');
+
+// document.addEventListener('keypress', (event) => {
+//    let keyword = String.fromCharCode(event.keyCode);
+//    if(keyword.indexOf(chosenWord) > -1) {
+//        //if right push to rightAnswer array
+//        rightAnswer.push(keyword);
+
+//        // replace underscore with right letter
+//        underScore[chosenWord.indexOf(keyword)] = keyword;
+//        tempUnderScore[0].innerHTML = underScore.join(' ');
+//        tempRightAnswer[0].innerHTML = rightAnswer.join(' ');
+//        //check to see if right answer
+//        if(underScore.join('') == chosenWord ) {
+//            alert('You won!')
+//        }
+//        //if wrong push to wrongAnswer array
+//    } else {
+//        wrongAnswer.push(keyword);
+//        tempWrongAnswer[0].innerHTML = wrongAnswer.join(' ');
+//    }
+// });
+
+// tempUnderScore[0].innerHTML = generateUnderscore.join('');
+
+}
+
+
+</script>
+</body>
+</html>
